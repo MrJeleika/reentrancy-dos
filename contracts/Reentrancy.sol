@@ -32,7 +32,6 @@ contract Voting{
       require(balances[msg.sender] > 100, "Not enough funds to refund");
       balances[msg.sender] -= 100;
       (payable(msg.sender)).transfer(100);
-    
     }
 
     modifier nonReentrant(){
